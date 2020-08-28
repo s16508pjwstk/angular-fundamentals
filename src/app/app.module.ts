@@ -13,6 +13,7 @@ import {EventDetailsComponent} from "./events/event-details/event-details.compon
 import {RouterModule} from "@angular/router";
 import {appRoutes} from "./routes";
 import {CreateEventComponent} from "./events/create-event.component";
+import {UserModule} from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {CreateEventComponent} from "./events/create-event.component";
     EventDetailsComponent,
     NavbarComponent,
     CreateEventComponent,
-    Error404Component
+    Error404Component,
   ],
   imports: [
     BrowserModule,
