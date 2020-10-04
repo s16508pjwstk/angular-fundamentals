@@ -6,6 +6,7 @@ import {Error404Component} from './errors/404.component';
 import { EventsAppComponent } from './events-app.component';
 import {CreateSessionComponent} from './events/event-details/create-session.component';
 import {EventRouteActivator} from './events/event-details/event-route-activator.service';
+import {SessionListComponent} from './events/event-details/session-list.component';
 import { EventsListComponent } from "./events/events-list.component";
 import { EventThumbnailComponent } from "./events/event-thumbnail.component";
 import { NavbarComponent } from "./nav/navbar.component";
@@ -27,7 +28,8 @@ import {UserModule} from './user/user.module';
     NavbarComponent,
     CreateEventComponent,
     Error404Component,
-    CreateSessionComponent
+    CreateSessionComponent,
+    SessionListComponent
   ],
   imports: [
     BrowserModule,
