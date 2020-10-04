@@ -1,6 +1,7 @@
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {CollapsibleWellComponent} from './common/collapsible-well.component';
 import {Error404Component} from './errors/404.component';
 
 import { EventsAppComponent } from './events-app.component';
@@ -29,7 +30,8 @@ import {UserModule} from './user/user.module';
     CreateEventComponent,
     Error404Component,
     CreateSessionComponent,
-    SessionListComponent
+    SessionListComponent,
+    CollapsibleWellComponent
   ],
   imports: [
     BrowserModule,
