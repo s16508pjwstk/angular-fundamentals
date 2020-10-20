@@ -10,6 +10,7 @@ import {EventRouteActivator} from './events/event-details/event-route-activator.
 import {SessionListComponent} from './events/event-details/session-list.component';
 import { EventsListComponent } from "./events/events-list.component";
 import { EventThumbnailComponent } from "./events/event-thumbnail.component";
+import {DurationPipe} from './events/shared/duration.pipe';
 import { NavbarComponent } from "./nav/navbar.component";
 import { EventService } from "./events/shared/event.service";
 import {ToastrService} from "./common/toastr.service";
@@ -31,7 +32,8 @@ import {UserModule} from './user/user.module';
     Error404Component,
     CreateSessionComponent,
     SessionListComponent,
-    CollapsibleWellComponent
+    CollapsibleWellComponent,
+    DurationPipe
   ],
   imports: [
     BrowserModule,
