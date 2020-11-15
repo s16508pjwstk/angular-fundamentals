@@ -2,12 +2,16 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {CollapsibleWellComponent} from './common/collapsible-well.component';
+import {ModalTriggerDirective} from './common/modalTrigger.directive';
+import {SimpleModalComponent} from './common/simpleModal.component';
 import {Error404Component} from './errors/404.component';
 
 import { EventsAppComponent } from './events-app.component';
 import {CreateSessionComponent} from './events/event-details/create-session.component';
 import {EventRouteActivator} from './events/event-details/event-route-activator.service';
 import {SessionListComponent} from './events/event-details/session-list.component';
+import {UpvoteComponent} from './events/event-details/upvote.component';
+import {VoterService} from './events/event-details/voter.service';
 import { EventsListComponent } from "./events/events-list.component";
 import { EventThumbnailComponent } from "./events/event-thumbnail.component";
 import {DurationPipe} from './events/shared/duration.pipe';
@@ -19,7 +23,10 @@ import {RouterModule} from "@angular/router";
 import {appRoutes} from "./routes";
 import {CreateEventComponent} from "./events/create-event.component";
 import {AuthService} from './user/auth.service';
+import { JQ_TOKEN } from './common';
 import {UserModule} from './user/user.module';
+
+let jQuery = window['$'];
 
 @NgModule({
   declarations: [
@@ -33,7 +40,10 @@ import {UserModule} from './user/user.module';
     CreateSessionComponent,
     SessionListComponent,
     CollapsibleWellComponent,
-    DurationPipe
+    DurationPipe,
+    SimpleModalComponent,
+    ModalTriggerDirective,
+    UpvoteComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +55,9 @@ import {UserModule} from './user/user.module';
     EventService,
     ToastrService,
     EventRouteActivator,
-    AuthService
+    AuthService,
+    { provide: JQ_TOKEN, useValue: jQuery},
+    VoterService
   ],
   bootstrap: [EventsAppComponent]
 })
